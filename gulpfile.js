@@ -66,6 +66,6 @@ DEPLOYMENT TASKS
 *******************************************************************************/
 
 // sequences build task to run for netlify
-gulp.task("dist", (callback) => {
+gulp.task("build", (callback) => {
   // deploy!
 });
