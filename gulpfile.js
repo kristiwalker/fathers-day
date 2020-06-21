@@ -19,7 +19,7 @@ gulp.task("default", (callback) => {
 gulp.task("browserSync", () => {
   browserSync.init({
     server: {
-      baseDir: "src",
+      baseDir: "dist",
     },
   });
 });
@@ -30,7 +30,7 @@ gulp.task("sass", function () {
   return gulp
     .src("src/sass/**/*.scss")
     .pipe(sass())
-    .pipe(gulp.dest("src/css"))
+    .pipe(gulp.dest("dist"))
     .pipe(
       browserSync.reload({
         stream: true,
@@ -46,7 +46,7 @@ gulp.task("babel", () =>
         presets: ["@babel/env"],
       })
     )
-    .pipe(gulp.dest("src/scripts/babel"))
+    .pipe(gulp.dest("dist"))
     .pipe(
       browserSync.reload({
         stream: true,
