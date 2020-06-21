@@ -1,0 +1,13 @@
+[build]
+  command = "gulp build"
+  publish = "dist"
+  NODE_ENV = "10.15.3"
+
+[dev]
+  command = "gulp"
+
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
